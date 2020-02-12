@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class PlayButtonController : MonoBehaviour
 {
-    private SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
+    public bool readyToPlay = false;
+    public Transform cameraTransform;
     public Sprite nextSprite;
     public Sprite prevSprite;
 
     // Start is called before the first frame update
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -29,6 +30,16 @@ public class PlayButtonController : MonoBehaviour
             {
                 spriteRenderer.sprite = prevSprite;
             }
+
+            if (Input.GetMouseButtonUp(0))
+            {
+                cameraTransform.position = new Vector3(0, 0, -10);
+                readyToPlay = true;
+            }
+        }
+        else
+        {
+            spriteRenderer.sprite = prevSprite;
         }
     }
 }
