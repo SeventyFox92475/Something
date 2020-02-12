@@ -7,6 +7,7 @@ ScriptsOnlyBuild:
     - PlayerMovement
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
   sceneClasses:
     Assets/Scenes/MainScene.unity:
     - Class: 1
@@ -503,4 +504,4 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Scenes/MainScene.unity
-  playerPath: C:/Unity Project Builds/RPG Game.exe
+  playerPath: C:/Unity Project Builds/FlappyBirdLike/Windows/x86/RPG Game.exe
