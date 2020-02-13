@@ -11,6 +11,11 @@ public class countdown : MonoBehaviour
     public Sprite two;
     public Sprite one;
     private SpriteRenderer spriteRenderer;
+    public AudioSource countDown;
+    public AudioSource countDownFinal;
+    private float time = 0f;
+    private int num = 0;
+    public bool readyToPlay = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,15 +29,37 @@ public class countdown : MonoBehaviour
     {
         if (buttonScript.readyToPlay == true)
         {
-            curTime = Time.time;
-            if (curTime - prevTime > 1.0f)
+            if (curTime - prevTime == 0.0f && num == 0)
+            {
+                countDown.Play();
+                num++;
+            }
+            curTime = Time.time - time;
+
+            if (curTime - prevTime >= 1.0f && num == 1)
             {
                 spriteRenderer.sprite = two;
-                if (curTime - prevTime > 2.0f)
-                {
-                    spriteRenderer.sprite = one;
-                }
+                countDown.Play();
+                num++;
             }
+            if (curTime - prevTime >= 2.0f && num == 2)
+            {
+                spriteRenderer.sprite = one;
+                countDown.Play();
+                num++;
+            }
+            if (curTime - prevTime >= 3.0f && num == 3)
+            {
+                spriteRenderer.sprite = null;
+                countDownFinal.Play();
+                readyToPlay = true;
+                num++;
+            }
+            
+        }
+        else
+        {
+            time = Time.time;
         }
     }
 }
