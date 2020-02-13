@@ -35,12 +35,10 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(buttonScript.readyToPlay);
         if (buttonScript.readyToPlay == true)
         {
             rb.isKinematic = false;
             GetComponent<PolygonCollider2D>().enabled = true;
-            Debug.Log("iuhfiuher");
             rotation = transform.localEulerAngles;
             // Jumping
             isGrounded = Physics2D.OverlapCircle(GroundCheck1.position, 1f, groundLayer); // checks if you are within 0.15 position in the Y of the ground

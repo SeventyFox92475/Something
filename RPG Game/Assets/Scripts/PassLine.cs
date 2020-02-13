@@ -29,6 +29,6 @@ public class PassLine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += Vector3.left * 5 * Time.deltaTime;
+        transform.position += Vector3.left * 3 * Time.deltaTime;
     }
 }
