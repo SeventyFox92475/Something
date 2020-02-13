@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     Vector3 rotation;
     public float jumpSpeed = 5;
     public float rotationDecrement;
+    PlayButtonController buttonScript;
     void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.gameObject.name != "LineToPass(Clone)")
@@ -27,14 +28,18 @@ public class PlayerMovement : MonoBehaviour
 
         }
     }
+    void Start()
+    {
+        GameObject playButton = GameObject.Find("Play Button");
+        buttonScript = playButton.GetComponent<PlayButtonController>();
+    }
     void Update()
     {
-        PlayButtonController buttonScript = GetComponent<PlayButtonController>();
         Debug.Log(buttonScript.readyToPlay);
         if (buttonScript.readyToPlay == true)
         {
+            rb.isKinematic = false;
             GetComponent<PolygonCollider2D>().enabled = true;
-            rb.constraints = RigidbodyConstraints2D.None;
             Debug.Log("iuhfiuher");
             rotation = transform.localEulerAngles;
             // Jumping
@@ -60,8 +65,8 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            rb.constraints = RigidbodyConstraints2D.FreezeAll;
-            GetComponent<PolygonCollider2D>().enabled = true;
+            rb.isKinematic = true;
+            GetComponent<PolygonCollider2D>().enabled = false;
         }
     }
 }

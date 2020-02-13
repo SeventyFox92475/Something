@@ -277,8 +277,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 114767036}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.18962, y: 2.198585, z: 3.925874}
-  m_LocalScale: {x: 70, y: 59.175133, z: 1}
+  m_LocalPosition: {x: 19.811, y: 2.198585, z: 3.925874}
+  m_LocalScale: {x: 72.500404, y: 59.175133, z: 1}
   m_Children: []
   m_Father: {fileID: 413776362}
   m_RootOrder: 1
@@ -684,7 +684,6 @@ GameObject:
   - component: {fileID: 771109232}
   - component: {fileID: 771109237}
   - component: {fileID: 771109233}
-  - component: {fileID: 771109238}
   - component: {fileID: 771109236}
   m_Layer: 0
   m_Name: Player
@@ -701,7 +700,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 771109231}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -951,23 +950,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &771109238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 771109231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1af2d6cc4811ce14ab0c2cf4b09d88d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
-  readyToPlay: 0
-  cameraTransform: {fileID: 0}
-  nextSprite: {fileID: 0}
-  prevSprite: {fileID: 0}
 --- !u!1 &996518443
 GameObject:
   m_ObjectHideFlags: 0

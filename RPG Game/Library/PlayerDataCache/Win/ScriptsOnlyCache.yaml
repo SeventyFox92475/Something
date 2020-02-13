@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - CloneObstacles
     - ObjectMovement
     - PassLine
+    - PlayButtonController
     - PlayerMovement
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -28,6 +29,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
@@ -43,9 +46,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11812}
     - Class: 114
-      Script: {instanceID: 12626}
+      Script: {instanceID: 12584}
     - Class: 114
-      Script: {instanceID: 12726}
+      Script: {instanceID: 12628}
+    - Class: 114
+      Script: {instanceID: 12728}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -149,7 +154,7 @@ ScriptsOnlyBuild:
     className: GridLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 997dcb16700155c5ae20df3e8e90f796
+      Hash: d64041c280f062df1285f4d208b95499
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMovement
@@ -383,6 +388,12 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
+      Hash: e4bf23341c15fa0e1be2fda9935a3b09
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayButtonController
+  - hash:
+      serializedVersion: 2
       Hash: fd238d134cd7ada6e641618218b4e5f5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -504,4 +515,5 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Scenes/MainScene.unity
-  playerPath: C:/Unity Project Builds/FlappyBirdLike/Windows/x86/RPG Game.exe
+  playerPath: C:/Github Repositories/Something/RPG Game/Builds/1.0/Windows/x86/RPG
+    Game.exe

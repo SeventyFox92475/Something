@@ -12,26 +12,26 @@ public class CloneObstacles : MonoBehaviour
     public Object LineToPass;
     public Transform LineToPassTransform;
     private float randy;
-
+    PlayButtonController buttonScript;
     // Update is called once per frame
     void Start()
     {
-        randy = Random.Range(5.0f, 10.0f);
-        Instantiate(LineToPass, new Vector2(10, randy), Quaternion.identity);
-        Instantiate(obstacle, new Vector2(10, randy), Quaternion.identity);
-        Instantiate(obstacle, new Vector2(10, randy - objectGap), Quaternion.identity);
+        GameObject playButton = GameObject.Find("Play Button");
+        buttonScript = playButton.GetComponent<PlayButtonController>();
     }
     void Update()
     {
-        currentTime = Time.time;
-        if (currentTime - prevTime > timeGap)
+        if (buttonScript.readyToPlay == true)
         {
-            randy = Random.Range(5.0f, 10.0f);
-            Instantiate(LineToPass, new Vector2(10, randy), Quaternion.identity);
-            Instantiate(obstacle, new Vector2(10, randy), Quaternion.identity);
-            Instantiate(obstacle, new Vector2(10, randy - objectGap), Quaternion.identity);
-            prevTime = currentTime;
+            currentTime = Time.time;
+            if (currentTime - prevTime > timeGap)
+            {
+                randy = Random.Range(5.0f, 10.0f);
+                Instantiate(LineToPass, new Vector2(10, randy), Quaternion.identity);
+                Instantiate(obstacle, new Vector2(10, randy), Quaternion.identity);
+                Instantiate(obstacle, new Vector2(10, randy - objectGap), Quaternion.identity);
+                prevTime = currentTime;
+            }
         }
-
     }
 }
