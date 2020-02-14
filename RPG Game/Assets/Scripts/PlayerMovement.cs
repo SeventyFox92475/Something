@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpSpeed = 5;
     public float rotationDecrement;
     PlayButtonController buttonScript;
+    countdown countdownScript;
     void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.gameObject.name != "LineToPass(Clone)")
@@ -28,21 +29,25 @@ public class PlayerMovement : MonoBehaviour
 
         }
     }
+
     void Start()
     {
         GameObject playButton = GameObject.Find("Play Button");
         buttonScript = playButton.GetComponent<PlayButtonController>();
+        GameObject counter = GameObject.Find("Countdown");
+        countdownScript = counter.GetComponent<countdown>();
     }
+
     void Update()
     {
-        if (buttonScript.readyToPlay == true)
+        if (buttonScript.readyToPlay == true && countdownScript.readyToPlay == true)
         {
             rb.isKinematic = false;
             GetComponent<PolygonCollider2D>().enabled = true;
             rotation = transform.localEulerAngles;
             // Jumping
             isGrounded = Physics2D.OverlapCircle(GroundCheck1.position, 1f, groundLayer); // checks if you are within 0.15 position in the Y of the ground
-            if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) && !isJumping) // both conditions can be in the same branch
+            if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetMouseButtonDown(0)) && !isJumping) // both conditions can be in the same branch
             {
                 jumpSound.Play();
                 rb.velocity = Vector2.up * jumpSpeed;

@@ -19,7 +19,7 @@ public class CloneObstacles : MonoBehaviour
     {
         GameObject playButton = GameObject.Find("Play Button");
         buttonScript = playButton.GetComponent<PlayButtonController>();
-        GameObject counter = GameObject.Find("countdown");
+        GameObject counter = GameObject.Find("Countdown");
         countdownScript = counter.GetComponent<countdown>();
     }
     void Update()
