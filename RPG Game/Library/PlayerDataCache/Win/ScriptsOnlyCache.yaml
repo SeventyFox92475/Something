@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - PassLine
     - PlayButtonController
     - PlayerMovement
+    - countdown
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -44,13 +45,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11408}
     - Class: 114
-      Script: {instanceID: 11812}
+      Script: {instanceID: 11622}
     - Class: 114
-      Script: {instanceID: 12584}
+      Script: {instanceID: 11814}
     - Class: 114
-      Script: {instanceID: 12628}
+      Script: {instanceID: 12586}
     - Class: 114
-      Script: {instanceID: 12728}
+      Script: {instanceID: 12630}
+    - Class: 114
+      Script: {instanceID: 12730}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -212,6 +215,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AnimationPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 93f12fdee7b8511c521232b65dcc2c82
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: countdown
   - hash:
       serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
@@ -515,5 +524,4 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Scenes/MainScene.unity
-  playerPath: C:/Github Repositories/Something/RPG Game/Builds/1.0/Windows/x86/RPG
-    Game.exe
+  playerPath: C:/Something/RPG Game/Builds/Windows/x86/1.0/RPG Game.exe

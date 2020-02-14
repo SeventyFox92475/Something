@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\PassLine.cs" />
     <Compile Include="Assets\Scripts\PlayButtonController.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\countdown.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Something/RPG Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
